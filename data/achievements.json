@@ -1,0 +1,22 @@
+[
+  {
+    "category": "Hackathons",
+    "title": "1st Place, Stanford TreeHacks 2026",
+    "description": "Led a team of 4 to build 'AegisAI', an LLM-powered smart contract security auditor that detects zero-day exploits. Executed automated verification on EVM bytecodes."
+  },
+  {
+    "category": "Research",
+    "title": "Outstanding Undergraduate Research Award",
+    "description": "Awarded by Computing Research Association (CRA) for contributions to real-time robotic visual localization methods at Berkeley."
+  },
+  {
+    "category": "Competitions",
+    "title": "Kaggle Competitions Master (Top 0.8%)",
+    "description": "Ranked in the top 1% among 3,500 participants in the RSNA Breast Cancer Detection Challenge by engineering a customized Vision Transformer ensemble."
+  },
+  {
+    "category": "Open Source",
+    "title": "Core Contributor, TransformerLens Toolkit",
+    "description": "Maintained and optimized tensor manipulation layers on a popular library for mechanical interpretability, improving clean hook instrumentation speeds by 40%."
+  }
+]

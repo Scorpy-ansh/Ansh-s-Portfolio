@@ -1,0 +1,134 @@
+[
+  {
+    "id": "wazuh-anomaly",
+    "name": "ML Anomaly Detection on Wazuh Logs & XAI",
+    "period": "May 2025 - Present",
+    "tags": ["Python", "XGBoost", "TensorFlow", "SHAP", "LIME", "Wazuh"],
+    "problemStatement": "Security operations struggle to review and audit raw, unstructured intrusion detection logs for behavioral signs of malicious threat vectors.",
+    "solution": "Built an end-to-end security pipeline that converts raw Wazuh IDS log items into temporal behavioral vectors, evaluating them using ensemble ML classification and SHAP explainer frameworks.",
+    "architecture": "Wazuh Agent Stream -> Temporal Encoding -> Ensemble Classifier (XGBoost + RF + LSTM) -> SHAP Attribution -> MITRE ATT&CK Alerts",
+    "features": [
+      "Extracted temporal and relational feature vectors from raw IDS log text rows.",
+      "Integrated SHAP and LIME explainer components to visualize neural threat attributions.",
+      "Mapped security alerts directly to standard MITRE ATT&CK tactic categories in real-time."
+    ],
+    "challenges": "Log streams present high drift and dimensions. Resolved by applying rolling-median imputation and combining deep-sequence models with tree-ensemble models.",
+    "results": "Decreased alert fatigue by suppressing normal operations with high precision, increasing threat detection speed.",
+    "metrics": {
+      "Detection Accuracy": "96.4%",
+      "Inference Latency": "18ms",
+      "False Alarms Reduction": "38%"
+    },
+    "githubUrl": "https://github.com/Scorpy-ansh",
+    "liveUrl": "",
+    "caseStudy": {
+      "overview": "A security log analysis pipeline providing model transparency and actionable explanation layers alongside anomaly scores.",
+      "workflow": [
+        "Inflow streaming log rows are ingested via standard agent channels.",
+        "Inputs are scaled and imputed using rolling historical medians.",
+        "The reconstruction anomaly scores are evaluated against ensemble trees.",
+        "Local perturbation paths (SHAP/LIME) compute feature attribution ranks.",
+        "Explanations are mapped directly to visible MITRE ATT&CK categories."
+      ],
+      "dataset": "Wazuh IDS logs and simulated network threat vectors (1.2M records).",
+      "model": "Ensemble Anomaly Classifier (XGBoost + Random Forest + LSTM/GRU)",
+      "training": {
+        "epochs": "64",
+        "batchSize": "256",
+        "optimizer": "Adam (lr=3e-4)",
+        "loss": "Binary Cross-Entropy"
+      },
+      "evaluation": "SHAP feature importance ranking mapped to threat categories.",
+      "accuracy": "96.4% Area Under Curve (AUC-ROC: 0.972)",
+      "deployment": "Containerized FastAPI server pushing alerts to security outputs.",
+      "futureImprovements": "Real-time incremental parameter updates for ongoing logs drift."
+    }
+  },
+  {
+    "id": "hindi-stt",
+    "name": "Predictive Hindi Speech-to-Text Speech System",
+    "period": "Jan 2025 - Apr 2025",
+    "tags": ["Python", "Deep Learning", "NLP", "Mozilla Common Voice", "REST API"],
+    "problemStatement": "Difficulty of achieving small word error rates for low-resource Hindi spoken audio datasets when processing noisy environmental background vectors.",
+    "solution": "Built a deep sequence network pipeline for Hindi speech-to-text parsing using spectrogram transformation, recurrent neural nets, and CTC decoding layer endpoints.",
+    "architecture": "Audio Wave Input -> Spectrogram Transformation -> Recurrent Seq2Seq Net -> CTC Decoder -> REST CLI Output",
+    "features": [
+      "Normalizes voice clips using sound-wave filtering techniques.",
+      "Converts raw audio waves into Mel-Spectrogram matrix parameters.",
+      "Exposes simple REST API endpoints to load voice files and retrieve string outputs."
+    ],
+    "challenges": "Various voice accents and dialect speeds degrade word error rates. Solved by training models on augmented Mozilla Common Voice files.",
+    "results": "Achieved stable transcription speed and low Word Error Rate even in medium environmental noise.",
+    "metrics": {
+      "Word Error Rate (WER)": "12.8%",
+      "Real-Time Factor (RTF)": "0.32",
+      "Character Accuracy": "87.2%"
+    },
+    "githubUrl": "https://github.com/Scorpy-ansh",
+    "liveUrl": "",
+    "caseStudy": {
+      "overview": "Deep sequence-to-sequence speech transcription pipeline tailored to low-resource audio datasets.",
+      "workflow": [
+        "Hindi raw audio files are normalized and filtered for noise.",
+        "Audio sequences are converted into MFCC mel-spectrogram arrays.",
+        "Trained neural architecture consumes temporal audio vectors.",
+        "Decoder maps features into tokens and outputs Hindi strings."
+      ],
+      "dataset": "Mozilla Common Voice Hindi Dataset (augmented audio clips).",
+      "model": "Acoustic Sequence-to-Sequence Recurrent Neural Network",
+      "training": {
+        "epochs": "90",
+        "batchSize": "64",
+        "optimizer": "AdamW (lr=1e-3)",
+        "loss": "Connectionist Temporal Classification (CTC)"
+      },
+      "evaluation": "WER valuation on unseen voice clips.",
+      "accuracy": "87.2% overall character matching.",
+      "deployment": "Docker-packaged REST API service.",
+      "futureImprovements": "Upgrading acoustic layer using Conformer backbones."
+    }
+  },
+  {
+    "id": "resnet-image",
+    "name": "ResNet Multi-Class Image Classification",
+    "period": "Oct 2024 - Dec 2024",
+    "tags": ["Python", "TensorFlow", "Keras", "CNNs", "Computer Vision"],
+    "problemStatement": "Diminishing gradients in classic deep convolutional backbones cause stagnation and optimization issues on multi-class image arrays.",
+    "solution": "Built a Keras ResNet-backed image classification model enforcing identity shortcut paths to support direct gradient backpropagation.",
+    "architecture": "Image Byte Matrix -> Resize & Normalization -> ResNet Blocks sequence -> Global Pooling -> Categorical Dense Node",
+    "features": [
+      "Configured residual skip block networks to preserve gradient signals.",
+      "Employed transfer learning to leverage deep pre-trained features.",
+      "Constructed visualization charts for validation accuracy matrices."
+    ],
+    "challenges": "Model overfit when trained on limited target images. Addressed using online augmentations (translation, shear, flip) and dropout regularizers.",
+    "results": "Ensured convergence with validation accuracy, providing stable classification results.",
+    "metrics": {
+      "Classification Accuracy": "94.2%",
+      "Inference Latency": "14ms",
+      "Parameters Count": "23.5M"
+    },
+    "githubUrl": "https://github.com/Scorpy-ansh",
+    "liveUrl": "",
+    "caseStudy": {
+      "overview": "Transfer-learning classification program targeting multi-class image recognition systems.",
+      "workflow": [
+        "Target image sets loaded and augmented with transforms.",
+        "Batches routed through ResNet residual block sequence.",
+        "Features pooling and dense connection classifies the output."
+      ],
+      "dataset": "Multi-class labeled visual classification array (augmented).",
+      "model": "ResNet CNN Classifier50 Backbone",
+      "training": {
+        "epochs": "50",
+        "batchSize": "128",
+        "optimizer": "AdamW (lr=5e-4)",
+        "loss": "Categorical Cross-Entropy"
+      },
+      "evaluation": "Top-1 and Top-5 errors categorization.",
+      "accuracy": "94.2% top-1 accuracy.",
+      "deployment": "Local models inference engine script.",
+      "futureImprovements": "Porting weights into MobileNet backbones for low-latency edge deployment."
+    }
+  }
+]

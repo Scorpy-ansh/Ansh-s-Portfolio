@@ -1,0 +1,18 @@
+{
+  "name": "Anshuman Pattanayak",
+  "title": "AI/ML Engineer",
+  "subtitle": "Aspiring ML/AI engineer focused on data preprocessing, model building, and applied machine learning workflows. Integrating model pipelines with clean web experiences.",
+  "location": "Odisha, India",
+  "phone": "+91 7735186824",
+  "email": "anshumanp1006@gmail.com",
+  "university": "Centurion University of Technology and Management",
+  "expectedGraduation": "Expected June 2027",
+  "resumeUrl": "/resume.pdf",
+  "githubUrl": "https://github.com/Scorpy-ansh",
+  "linkedinUrl": "https://www.linkedin.com/in/anshuman-pattanayak-3ba579338/",
+  "aboutParagraph": "I am an aspiring AI/ML Engineer focused on data preprocessing, model building, and applied machine learning workflows. I have hands-on experience with Python, analytical tooling, and end-to-end model experimentation. Additionally, I bring design sensibilities and frontend strengths in web development, enabling smooth integration of machine learning models into usable, real-world products. I am passionate about optimizing data pipelines and engineering explainability layers to make complex systems highly interpretable.",
+  "yearsCoding": "3+ Years",
+  "languages": "Python, Java, C, JavaScript, SQL",
+  "interests": "Machine Learning, Deep Learning, Anomaly Detection, Natural Language Processing, Computer Vision",
+  "currentFocus": "Developing explainable AI frameworks for cybersecurity anomaly alerts."
+}

@@ -1,0 +1,35 @@
+{
+  "interests": [
+    "Machine Learning",
+    "Deep Learning",
+    "Large Language Models",
+    "Agentic AI",
+    "Computer Vision",
+    "Explainable AI",
+    "Robotics",
+    "Cyber Security AI"
+  ],
+  "publications": [
+    {
+      "title": "Minimizing Pipeline Bubbles in Distributed MoE Training via Active Gradient Checkpointing",
+      "conference": "NeurIPS 2026 (Under Review)",
+      "journal": "NeurIPS Foundation Models Workshop",
+      "doi": "10.48550/arXiv.2608.12940",
+      "link": "https://arxiv.org"
+    },
+    {
+      "title": "Sparse Autoencoders for Feature Isolation in Early-Layer Residual Connections",
+      "conference": "ICML 2026 Oral (Submitted)",
+      "journal": "ICML mechanistic interpretability group",
+      "doi": "10.48550/arXiv.2604.09871",
+      "link": "https://arxiv.org"
+    },
+    {
+      "title": "Self-Supervised Visual-Language-Action Policies for Cluttered Robotic Workspace Manipulation",
+      "conference": "IEEE International Conference on Robotics and Automation (ICRA 2025)",
+      "journal": "ICRA conference, Kobe",
+      "doi": "10.1109/ICRA.2025.10982",
+      "link": "https://arxiv.org"
+    }
+  ]
+}
