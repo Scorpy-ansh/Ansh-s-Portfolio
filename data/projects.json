@@ -19,7 +19,7 @@
       "Inference Latency": "18ms",
       "False Alarms Reduction": "38%"
     },
-    "githubUrl": "https://github.com/Scorpy-ansh",
+    "githubUrl": "https://github.com/Scorpy-ansh/ML-Enhanced-Anomaly-Detection-on-Wazuh-logs-and-explainaible-Ai",
     "liveUrl": "",
     "caseStudy": {
       "overview": "A security log analysis pipeline providing model transparency and actionable explanation layers alongside anomaly scores.",
@@ -46,11 +46,11 @@
   },
   {
     "id": "hindi-stt",
-    "name": "Predictive Hindi Speech-to-Text Speech System",
+    "name": "Hindi Speech Recognition with Whisper",
     "period": "Jan 2025 - Apr 2025",
     "tags": ["Python", "Deep Learning", "NLP", "Mozilla Common Voice", "REST API"],
-    "problemStatement": "Difficulty of achieving small word error rates for low-resource Hindi spoken audio datasets when processing noisy environmental background vectors.",
-    "solution": "Built a deep sequence network pipeline for Hindi speech-to-text parsing using spectrogram transformation, recurrent neural nets, and CTC decoding layer endpoints.",
+    "problemStatement": "Hindi speech recognition project using Whisper, with fine-tuning and WER/CER evaluation on a speaker-disjoint test split.",
+    "solution": "Provides a Streamlit app for audio upload or microphone input, Hindi transcription, English translation, and batch processing.",
     "architecture": "Audio Wave Input -> Spectrogram Transformation -> Recurrent Seq2Seq Net -> CTC Decoder -> REST CLI Output",
     "features": [
       "Normalizes voice clips using sound-wave filtering techniques.",
@@ -64,7 +64,7 @@
       "Real-Time Factor (RTF)": "0.32",
       "Character Accuracy": "87.2%"
     },
-    "githubUrl": "https://github.com/Scorpy-ansh",
+    "githubUrl": "https://github.com/Scorpy-ansh/Hindi-asr-whisper",
     "liveUrl": "",
     "caseStudy": {
       "overview": "Deep sequence-to-sequence speech transcription pipeline tailored to low-resource audio datasets.",
@@ -90,11 +90,11 @@
   },
   {
     "id": "resnet-image",
-    "name": "ResNet Multi-Class Image Classification",
+    "name": "ResNet50 Fungal Image Classification",
     "period": "Oct 2024 - Dec 2024",
     "tags": ["Python", "TensorFlow", "Keras", "CNNs", "Computer Vision"],
-    "problemStatement": "Diminishing gradients in classic deep convolutional backbones cause stagnation and optimization issues on multi-class image arrays.",
-    "solution": "Built a Keras ResNet-backed image classification model enforcing identity shortcut paths to support direct gradient backpropagation.",
+    "problemStatement": "Classifies microscopic fungal images across five species using an ImageNet-pretrained ResNet50 backbone.",
+    "solution": "Trains the classification head with the backbone frozen, then fine-tunes the top residual block with augmentation and regularization.",
     "architecture": "Image Byte Matrix -> Resize & Normalization -> ResNet Blocks sequence -> Global Pooling -> Categorical Dense Node",
     "features": [
       "Configured residual skip block networks to preserve gradient signals.",
@@ -108,7 +108,7 @@
       "Inference Latency": "14ms",
       "Parameters Count": "23.5M"
     },
-    "githubUrl": "https://github.com/Scorpy-ansh",
+    "githubUrl": "https://github.com/Scorpy-ansh/Resnet50-Image-Classification",
     "liveUrl": "",
     "caseStudy": {
       "overview": "Transfer-learning classification program targeting multi-class image recognition systems.",

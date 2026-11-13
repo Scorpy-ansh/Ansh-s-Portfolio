@@ -47,6 +47,31 @@ const LANG_COLOR: Record<string, string> = {
   C: "#555555",
 };
 
+const README_DESCRIPTIONS: Record<string, string> = {
+  "Resnet50-Image-Classification":
+    "Classifies microscopic fungi with an ImageNet-pretrained ResNet50, two-stage transfer learning, and regularized fine-tuning.",
+  "VGG-Image-Classification":
+    "Uses VGG19 transfer learning to classify microscopic fungi, with data augmentation, dropout, L2 regularization, and label smoothing.",
+  "resume-matcher":
+    "Ranks resumes against job descriptions using TF-IDF and SBERT similarity, with skill extraction, match explanations, and CSV export.",
+  ResumeGPT:
+    "Analyzes PDF resumes with Gemini to provide recruiter feedback, ATS guidance, interview practice, career roadmaps, and cover letters.",
+  CODSOFT:
+    "A showcase of responsive UI/UX internship designs, including a signup flow, email template, restaurant menu, and e-commerce site.",
+  "pedestrian-safety":
+    "Visualizes street-safety risk and finds safer pedestrian routes using OpenStreetMap data, an interactive map, and graph routing.",
+  "CodeAlpha_Disease-Prediction-from-Medical-Data":
+    "Trains and compares classification models for heart-disease prediction using the UCI Heart Disease dataset.",
+  "Hindi-asr-whisper":
+    "Fine-tunes and evaluates Whisper for Hindi speech recognition, with WER/CER metrics, audio or microphone input, batch transcription, and English translation.",
+  "indian-crop-production-data-analysis":
+    "Cleans and explores Indian crop-production data, assessing data quality and visualizing trends to prepare it for future machine learning.",
+  "CodeAlpha_Credit-Scoring-Model":
+    "Compares credit-default classification models with preprocessing, evaluation metrics, and visual reports across synthetic and real datasets.",
+  dsGuard:
+    "Ranks candidate dsRNA windows by predicted potency and screens them against non-target organisms, reporting sequence matches and risk-mitigation guidance.",
+};
+
 function RepoCard({ repo }: { repo: GithubRepo }) {
   const [ago, setAgo] = useState<string>("");
   const dot = LANG_COLOR[repo.language ?? ""] ?? "#8a8a8a";
@@ -111,7 +136,9 @@ function RepoCard({ repo }: { repo: GithubRepo }) {
         className="text-xs leading-relaxed line-clamp-2 flex-1"
         style={{ color: "var(--text-secondary)" }}
       >
-        {repo.description ?? "No description provided."}
+        {README_DESCRIPTIONS[repo.name] ??
+          repo.description ??
+          "No description provided."}
       </p>
 
       {/* Topics */}
