@@ -89,46 +89,48 @@
     }
   },
   {
-    "id": "resnet-image",
-    "name": "ResNet50 Fungal Image Classification",
-    "period": "Oct 2024 - Dec 2024",
-    "tags": ["Python", "TensorFlow", "Keras", "CNNs", "Computer Vision"],
-    "problemStatement": "Classifies microscopic fungal images across five species using an ImageNet-pretrained ResNet50 backbone.",
-    "solution": "Trains the classification head with the backbone frozen, then fine-tunes the top residual block with augmentation and regularization.",
-    "architecture": "Image Byte Matrix -> Resize & Normalization -> ResNet Blocks sequence -> Global Pooling -> Categorical Dense Node",
+    "id": "resume-iq",
+    "name": "ResumeIQ — AI Resume & Career Assistant",
+    "period": "Oct 2026 - Present",
+    "tags": ["Python", "Flask", "Google Gemini", "pdfplumber", "Vercel"],
+    "problemStatement": "Job seekers need practical resume feedback, ATS guidance, interview practice, career direction, and tailored application materials in one place.",
+    "solution": "Built a resume-analysis application that extracts text from uploaded PDFs and uses five specialized Gemini prompts to generate actionable career reports.",
+    "architecture": "PDF Upload -> pdfplumber Text Extraction -> 8,000-Character Input Limit -> Five Gemini Analyses -> Interactive Reports",
     "features": [
-      "Configured residual skip block networks to preserve gradient signals.",
-      "Employed transfer learning to leverage deep pre-trained features.",
-      "Constructed visualization charts for validation accuracy matrices."
+      "Reviews resume strengths, weaknesses, improvements, and recruiter recommendations.",
+      "Provides ATS feedback, tailored interview questions, and a six-month career roadmap.",
+      "Generates a personalized cover letter and presents results in separate report tabs."
     ],
-    "challenges": "Model overfit when trained on limited target images. Addressed using online augmentations (translation, shear, flip) and dropout regularizers.",
-    "results": "Ensured convergence with validation accuracy, providing stable classification results.",
+    "challenges": "Resume documents vary in length and formatting. Extracted text is capped at 8,000 characters for predictable model input, and text-based PDFs are recommended.",
+    "results": "Delivers five resume and career analysis tools through a responsive website while preserving the original Streamlit application.",
     "metrics": {
-      "Classification Accuracy": "94.2%",
-      "Inference Latency": "14ms",
-      "Parameters Count": "23.5M"
+      "Analysis Tools": "5",
+      "Input Limit": "8,000 chars",
+      "App Interfaces": "2"
     },
-    "githubUrl": "https://github.com/Scorpy-ansh/Resnet50-Image-Classification",
-    "liveUrl": "",
+    "githubUrl": "https://github.com/Scorpy-ansh/ResumeGPT",
+    "liveUrl": "https://resume-gpt-omega.vercel.app/",
     "caseStudy": {
-      "overview": "Transfer-learning classification program targeting multi-class image recognition systems.",
+      "overview": "An AI career companion that turns a text-based PDF resume into recruiter-style feedback and a practical job-search plan.",
       "workflow": [
-        "Target image sets loaded and augmented with transforms.",
-        "Batches routed through ResNet residual block sequence.",
-        "Features pooling and dense connection classifies the output."
+        "Upload a text-based PDF resume through the website.",
+        "Extract readable resume text with pdfplumber.",
+        "Limit model input to 8,000 characters.",
+        "Send five specialized prompts to Google Gemini.",
+        "Review the results in separate report tabs."
       ],
-      "dataset": "Multi-class labeled visual classification array (augmented).",
-      "model": "ResNet CNN Classifier50 Backbone",
+      "dataset": "Text extracted from the candidate's uploaded PDF resume.",
+      "model": "Five Gemini-powered modules: resume review, ATS checker, interview prep, career roadmap, and cover letter.",
       "training": {
-        "epochs": "50",
-        "batchSize": "128",
-        "optimizer": "AdamW (lr=5e-4)",
-        "loss": "Categorical Cross-Entropy"
+        "epochs": "N/A",
+        "batchSize": "N/A",
+        "optimizer": "Google Gemini API",
+        "loss": "Prompt-based analysis"
       },
-      "evaluation": "Top-1 and Top-5 errors categorization.",
-      "accuracy": "94.2% top-1 accuracy.",
-      "deployment": "Local models inference engine script.",
-      "futureImprovements": "Porting weights into MobileNet backbones for low-latency edge deployment."
+      "evaluation": "Five focused reports covering resume quality, ATS fit, interview preparation, career direction, and cover-letter drafting.",
+      "accuracy": "Not a predictive classification model; output quality depends on resume content and AI responses.",
+      "deployment": "Responsive Flask website deployed on Vercel; original Streamlit app retained.",
+      "futureImprovements": "Add OCR support for scanned or image-only PDF resumes."
     }
   }
 ]

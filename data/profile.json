@@ -10,7 +10,7 @@
   "resumeUrl": "/resume.pdf",
   "githubUrl": "https://github.com/Scorpy-ansh",
   "linkedinUrl": "https://www.linkedin.com/in/anshuman-pattanayak-3ba579338/",
-  "aboutParagraph": "I am an aspiring AI/ML Engineer focused on data preprocessing, model building, and applied machine learning workflows. I have hands-on experience with Python, analytical tooling, and end-to-end model experimentation. Additionally, I bring design sensibilities and frontend strengths in web development, enabling smooth integration of machine learning models into usable, real-world products. I am passionate about optimizing data pipelines and engineering explainability layers to make complex systems highly interpretable.",
+  "aboutParagraph": "I am a Computer Science undergraduate specializing in applied machine learning and generative AI. I build Python-based applications and ML pipelines, with hands-on experience in cybersecurity analytics, natural language processing, and explainable AI. My projects include a Wazuh-log anomaly detection system, Hindi speech recognition with fine-tuned Whisper, and ResumeIQ, an AI-powered resume and career assistant. I enjoy turning these systems into practical tools through thoughtful web experiences.",
   "yearsCoding": "3+ Years",
   "languages": "Python, Java, C, JavaScript, SQL",
   "interests": "Machine Learning, Deep Learning, Anomaly Detection, Natural Language Processing, Computer Vision",

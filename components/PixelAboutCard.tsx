@@ -4,11 +4,12 @@ import React, { useState, useEffect } from "react";
 import { GithubIcon, LinkedinIcon } from "./Icons";
 import { Mail, Phone, MapPin, GraduationCap, Cpu } from "lucide-react";
 import profileData from "../data/profile.json";
+import educationData from "../data/education.json";
 
 const TYPING_LINES = [
   "> Anshuman Pattanayak",
   "> AI / ML Engineer",
-  "> Centurion University — CGPA 8.69",
+  `> Centurion University — CGPA ${educationData[0].cgpa.split(" /")[0]}`,
   "> Odisha, India",
   "> anshumanp1006@gmail.com",
 ];
@@ -131,7 +132,7 @@ export default function PixelAboutCard() {
           <div className="grid grid-cols-2 gap-2.5">
             {[
               { icon: <GraduationCap size={11} />, label: "Degree", value: "B.Tech CSE" },
-              { icon: <Cpu size={11} />, label: "CGPA", value: "8.69 / 10.0" },
+              { icon: <Cpu size={11} />, label: "CGPA", value: educationData[0].cgpa },
               { icon: <MapPin size={11} />, label: "Location", value: "Odisha, India" },
               { icon: <Phone size={11} />, label: "Phone", value: "+91 7735186824" },
             ].map((stat) => (
